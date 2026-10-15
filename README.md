@@ -26,7 +26,26 @@ Todo el diseño curricular, los ejercicios base y la estructura conceptual de es
 ## 🛠️ Stack Tecnológico
 
 * **Lenguaje:** Python 3.12+
+* **Gestor de Paquetes y Entornos:** [Astral `uv`](https://docs.astral.sh/uv/) (`pyproject.toml` + `uv.lock`)
 * **Framework Web:** FastAPI (`fastapi[standard]`)
 * **Validación de Datos:** Pydantic v2 (`BaseModel`, `Field`)
 * **Cliente HTTP Asíncrono:** `httpx` (`AsyncClient`)
 * **Inferencia Local:** Servidor LLM local compatible con OpenAI API (`/v1/chat/completions`)
+
+---
+
+## 🚀 Guía Rápida de Comandos con `uv`
+
+```powershell
+# 1. Inicializar el proyecto (Fase 1)
+uv init --app .
+
+# 2. Añadir FastAPI como dependencia
+uv add "fastapi[standard]"
+
+# 3. Levantar el servidor de desarrollo
+uv run fastapi dev main.py
+
+# 4. Sincronizar el entorno en cualquier momento
+uv sync
+```
